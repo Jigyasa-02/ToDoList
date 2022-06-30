@@ -63,14 +63,14 @@ function App() {
   }, [list]);
   return (
     <section className='section-center'>
-      <form className='grocery-form' onSubmit={handleSubmit}>
+      <form className='todo-form' onSubmit={handleSubmit}>
         {alert.show && <Alert {...alert} removeAlert={showAlert} list={list} />}
 
         <h1>ToDo List</h1>
         <div className='form-control'>
           <input
             type='text'
-            className='grocery'
+            className='todo'
             placeholder='e.g. do laudry'
             value={name}
             onChange={(e) => setName(e.target.value)}
@@ -81,7 +81,7 @@ function App() {
         </div>
       </form>
       {list.length > 0 && (
-        <div className='grocery-container'>
+        <div className='todo-container'>
           <List items={list} removeItem={removeItem} editItem={editItem} />
           <button className='clear-btn' onClick={clearList}>
             clear items

@@ -19,7 +19,6 @@ const List = ({ items, removeItem, editItem }) => {
                 className='delete-btn'
                 onClick={() => removeItem(id)}
               >
-               
               </button>
             </div>
           </article>
